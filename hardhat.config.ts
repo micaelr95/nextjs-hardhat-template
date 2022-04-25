@@ -39,6 +39,9 @@ task("deploy", "Deploy smart contracts", async (taskArgs, hre) => {
 const config: HardhatUserConfig = {
   solidity: "0.8.4",
   networks: {
+    hardhat: {
+      chainId: 1337,
+    },
     ropsten: {
       url: process.env.ROPSTEN_URL || "",
       accounts:
@@ -51,12 +54,6 @@ const config: HardhatUserConfig = {
   },
   etherscan: {
     apiKey: process.env.ETHERSCAN_API_KEY,
-  },
-  paths: {
-    sources: "./ethereum/contracts",
-    tests: "./ethereum/test",
-    cache: "./ethereum/cache",
-    artifacts: "./ethereum/artifacts",
   },
 };
 

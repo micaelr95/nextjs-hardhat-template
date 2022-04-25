@@ -36,5 +36,5 @@ coverage.json
 typechain-types
 
 #Hardhat files
-/ethereum/cache
-/ethereum/artifacts
+/cache
+/artifacts
